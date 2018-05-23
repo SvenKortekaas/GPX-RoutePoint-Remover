@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Open Source Online GPX RoutePoint Remover. Very easy online tool to remove the routepoints in a GPX file.">
+    <meta name="author" content="Sven Kortekaas">
+
+    <title>Open Source Online GPX RoutePoint Remover</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha256-Md8eaeo67OiouuXAi8t/Xpd8t2+IaJezATVTWbZqSOw=" crossorigin="anonymous" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">GPX RpR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/SvenKortekaas/motortracks">Github</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Open Source Online GPX RoutePoint Remover</h1>
+          <p>GPX RpR - Very easy online tool to remove the routepoints in a GPX file.</p>
+          <p><input type="file" class="btn btn-primary btn-lg" role="button" value="Browse" id="fileUpload" /></p>
+		  <p><a class="btn btn-primary btn-lg" href="#" role="button" id="upload">2. Upload</a>
+		  <a class="btn btn-primary btn-lg" href="#" role="button" id="parse">3. Do Magic</a>
+		  <a class="btn btn-primary btn-lg" href="#" role="button" id="download">4. Download</a></p>
+		  <p><a class="btn btn-primary btn-lg" href="#" role="button" id="showResult">Show Result</a>
+		  <a class="btn btn-primary btn-lg" href="#" role="button" id="reset">Reset</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+		<div class="row" id="resultRow">
+		  <h2>Result</h2>
+		  <textarea class="form-control" rows="10" id="xmlArea" readonly></textarea>
+		</div>
+        <div class="row" id="debugDataRow">
+          <div class="col-md-4" id="divFileData">
+            <h2>Original</h2>
+			<textarea class="form-control" rows="5" id="fileData" readonly></textarea>
+          </div>
+          <div class="col-md-4" id="divResultArea">
+            <h2>Intermediate</h2>
+			<textarea class="form-control" rows="5" id="resultArea" readonly></textarea>
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+      <p>Code by Sven Kortekaas</p>
+    </footer>
+	
+	<!-- Hiding textareas -->
+	<script type="text/javascript">
+		document.getElementById("debugDataRow").style.display = "none";
+		document.getElementById("resultRow").style.display = "none";
+		document.getElementById("showResult").style.display = "none";
+		document.getElementById("reset").style.display = "none";
+	</script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha256-xaF9RpdtRxzwYMWg4ldJoyPWqyDPCRD0Cv7YEEe6Ie8=" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript" src="js/parser.js"></script>
+	<script type="text/javascript" src="js/downloader.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+  </body>
+</html>
